@@ -1,4 +1,5 @@
 const { providers } = require('./providers');
+const { sendEmail } = require('./reporter');
 
 const isMatch = (request, result) => (result < request.max);
 
@@ -9,6 +10,8 @@ const reportMatch = (provider, request, result) => {
   
   const text = `Trip with destination to ${destination} with dates ${dates}. LINK: ${url}. Email: ${request.client}`;
   console.log(`MATCH with $${result}!!!!`, text);
+  
+  sendEmail(request.client, 'We found a deal!!!', text);
 };
 
 const processRequest = async (request) => {
