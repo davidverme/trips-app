@@ -8,8 +8,8 @@ const reportMatch = (provider, request, result) => {
   const dates = request.itinerary.map((item) => item.date).join(',');
   const url = provider.getResultUrl(request.itinerary);
   
-  const text = `Trip with destination to ${destination} with dates ${dates}. LINK: ${url}. Email: ${request.client}`;
-  console.log(`MATCH with $${result}!!!!`, text);
+  const text = `Pay $${result} for a trip with destination to ${destination} with dates ${dates}. LINK: ${url}. Email: ${request.client}`;
+  console.log(`MATCH with!!!!`, text);
   
   sendEmail(request.client, 'We found a deal!!!', text);
 };

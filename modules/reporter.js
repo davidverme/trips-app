@@ -9,7 +9,7 @@ const sendEmail = (email, subject, text) => {
   } = config.reporter.email;
 
   const fromEmail = new helper.Email(sender);
-  const toEmail = new helper.Email('test@example.com');
+  const toEmail = new helper.Email(email);
   const content = new helper.Content('text/plain', text);
   const mail = new helper.Mail(fromEmail, subject, toEmail, content);
   
