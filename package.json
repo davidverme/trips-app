@@ -1,16 +1,20 @@
 {
   "name": "trips-app",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.15.3"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "find": "node index.js"
+    "find": "node --eval 'require(\"./modules/finder\").find()'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "config": "^3.2.3",
     "node-fetch": "^2.6.0"
   }
 }
