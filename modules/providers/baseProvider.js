@@ -1,3 +1,6 @@
+const config = require('config');
+const currencies = config.currencies;
+
 class BaseProvider {
   constructor(name) {
     this.name = name;
@@ -9,6 +12,10 @@ class BaseProvider {
 
   async processItinerary(itinerary) {
     throw new Error('Not implemented function');
+  }
+
+  translateCurrency(value) {
+    return value / currencies[this.currency];
   }
 }
 

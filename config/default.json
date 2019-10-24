@@ -12,14 +12,14 @@
     }, {
       "from": "NYC",
       "to": "BUE",
-      "date": "2020/05/05",
+      "date": "2020/05/06",
       "flexible": 1
     }],
     "client": "david.verme@gmail.com",
     "adults": 4,
     "children": 0,
     "infants": 1,
-    "max": 35000,
+    "max": 600,
     "active": true,
     "expire": 1585710000000
   }, {
@@ -27,24 +27,30 @@
       "from": "BUE",
       "to": "MIA",
       "date": "2020/04/24",
-      "flexible": 1
+      "flexible": 3
     }, {
       "from": "MIA",
       "to": "BUE",
-      "date": "2020/05/06"
+      "date": "2020/05/06",
+      "flexible": 3
     }],
     "client": "david.verme@gmail.com",
     "adults": 4,
     "children": 0,
     "infants": 1,
-    "max": 30000,
+    "max": 500,
     "active": true,
     "expire": 1585710000000
   }, {
     "itinerary": [{
       "from": "BUE",
       "to": "NYC",
-      "date": "2020/04/21",
+      "date": "2020/04/20",
+      "flexible": 2
+    }, {
+      "from": "NYC",
+      "to": "MIA",
+      "date": "2020/04/24",
       "flexible": 1
     }, {
       "from": "MIA",
@@ -56,7 +62,26 @@
     "adults": 4,
     "children": 0,
     "infants": 1,
-    "max": 35000,
+    "max": 600,
+    "active": true,
+    "expire": 1585710000000
+  }, {
+    "itinerary": [{
+      "from": "BUE",
+      "to": "MIA",
+      "date": "2020/04/23",
+      "flexible": 2
+    }, {
+      "from": "NYC",
+      "to": "BUE",
+      "date": "2020/05/06",
+      "flexible": 2
+    }],
+    "client": "david.verme@gmail.com",
+    "adults": 4,
+    "children": 0,
+    "infants": 1,
+    "max": 1000,
     "active": true,
     "expire": 1585710000000
   }],
@@ -65,12 +90,18 @@
       "api": {
         "url": "https://almundo.com.ar/flights/async/itineraries"
       },
-      "resultBaseUrl": "https://almundo.com.ar/flights/results"
+      "resultBaseUrl": "https://almundo.com.ar/flights/results",
+      "currency": "ARS"
     }
   },
   "reporter": {
+    "apiKey": "",
     "email": {
       "sender": "david.verme@gmail.com"
     }
+  },
+  "currencies": {
+    "USD": 1,
+    "ARS": 62
   }
 }

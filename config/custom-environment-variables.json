@@ -1,0 +1,9 @@
+{
+  "currencies": {
+    "USD": "CURRENCY_USD_RATE",
+    "ARS": "CURRENCY_ARS_RATE"
+  },
+  "reporter": {
+    "apiKey": "SENDGRID_API_KEY"
+  }
+}

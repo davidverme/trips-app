@@ -5,6 +5,12 @@ const { BaseProvider } = require('./baseProvider');
 const providerConfig = config.providers.almundo;
 
 class AlmundoProvider extends BaseProvider {
+  constructor(props) {
+    super(props);
+    
+    this.currency = providerConfig.currency;
+  }
+
   getResultUrl(itinerary) {
     const from = itinerary.map((item) => item.from).join(',');
     const to = itinerary.map((item) => item.to).join(',');
@@ -22,7 +28,7 @@ class AlmundoProvider extends BaseProvider {
     const result = await fetch(url);
     const data = await result.json();
     
-    return data.results.cheaper_cluster.price.total;
+    return this.translateCurrency(data.results.cheaper_cluster.price.total);
   }
 }
 

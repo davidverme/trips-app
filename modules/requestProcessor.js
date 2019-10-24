@@ -14,15 +14,61 @@ const reportMatch = (provider, request, result) => {
   sendEmail(request.client, 'We found a deal!!!', text);
 };
 
+const formatNumber = number => ("0" + number).slice(-2);
+
+const addDaysToItinerary = (itinerary, days, index) => {
+  const newItinerary = JSON.parse(JSON.stringify(itinerary));
+  
+  const newDate = new Date(itinerary[index].date);
+  newDate.setDate(newDate.getDate() + days);
+  
+  const dateToUse = [
+    newDate.getFullYear(),
+    formatNumber(newDate.getMonth() + 1),
+    formatNumber(newDate.getDate()),
+  ].join('/');
+
+  newItinerary[index].flexible = null;
+  newItinerary[index].date = dateToUse;
+  
+  return newItinerary;
+};
+
+const getExtendedItineraries = (itinerary, nested) => {
+  let result = [itinerary];
+  
+  itinerary.forEach((step, index) => {
+    const flexible = step.flexible;
+    if (flexible) {
+      for (let i = 1; i <= flexible; i++) {
+        const newItineraryUp = addDaysToItinerary(itinerary, i, index);
+        result = result.concat(getExtendedItineraries(newItineraryUp));
+
+        const newItineraryDown = addDaysToItinerary(itinerary, i * -1, index);
+        result = result.concat(getExtendedItineraries(newItineraryDown));
+      }
+    }
+  });
+  
+  return result.filter((itinerary, index) => 
+    result.findIndex(toCompare => JSON.stringify(toCompare) === JSON.stringify(itinerary)) === index);
+};
+
 const processRequest = async (request) => {
   console.log('About to process request: ', request);
   
-  await Promise.all(providers.map(async (provider) => {
-    const result = await provider.processItinerary(request.itinerary);
-    console.log('RESULT: ', result);
-    if (isMatch(request, result)) {
-      reportMatch(provider, request, result);
-    }
+  const itineraries = getExtendedItineraries(request.itinerary);
+
+  await Promise.all(providers.map((provider) => {
+    itineraries.forEach(async (itinerary) => {
+      const result = await provider.processItinerary(itinerary);
+      console.log('Processed itinerary: ', itinerary);
+      console.log('RESULT: ', result);
+
+      if (isMatch(request, result)) {
+        reportMatch(provider, request, result);
+      }
+    });
   }));
   
   console.log('Request processed with providers: ', providers.map(provider => provider.name).join(','));
