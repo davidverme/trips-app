@@ -1,5 +1,6 @@
 {
   "requests": [{
+    "description": "Buenos Aires, Miami y New York",
     "itinerary": [{
       "from": "BUE",
       "to": "MIA",
@@ -13,26 +14,27 @@
       "from": "NYC",
       "to": "BUE",
       "date": "2020/05/06",
-      "flexible": 1
+      "flexible": 2
     }],
     "client": "david.verme@gmail.com",
     "adults": 4,
     "children": 0,
     "infants": 1,
-    "max": 600,
+    "max": 550,
     "active": false,
     "expire": 1585710000000
   }, {
+    "description": "Buenos Aires a Miami",
     "itinerary": [{
       "from": "BUE",
       "to": "MIA",
-      "date": "2020/04/24",
-      "flexible": 3
+      "date": "2020/04/23",
+      "flexible": 2
     }, {
       "from": "MIA",
       "to": "BUE",
       "date": "2020/05/06",
-      "flexible": 3
+      "flexible": 2
     }],
     "client": "david.verme@gmail.com",
     "adults": 4,
@@ -42,20 +44,21 @@
     "active": false,
     "expire": 1585710000000
   }, {
+    "description": "Buenos Aires, New York y Miami",
     "itinerary": [{
       "from": "BUE",
       "to": "NYC",
-      "date": "2020/04/20",
-      "flexible": 2
+      "date": "2020/04/21",
+      "flexible": 1
     }, {
       "from": "NYC",
       "to": "MIA",
-      "date": "2020/04/24",
+      "date": "2020/04/25",
       "flexible": 1
     }, {
       "from": "MIA",
       "to": "BUE",
-      "date": "2020/05/02",
+      "date": "2020/05/03",
       "flexible": 1
     }],
     "client": "david.verme@gmail.com",
@@ -66,23 +69,64 @@
     "active": false,
     "expire": 1585710000000
   }, {
+    "description": "Buenos Aires a Miami, volviendo de New York",
     "itinerary": [{
       "from": "BUE",
       "to": "MIA",
-      "date": "2020/04/23",
-      "flexible": 0
+      "date": "2020/04/24",
+      "flexible": 1
     }, {
       "from": "NYC",
       "to": "BUE",
       "date": "2020/05/06",
-      "flexible": 0
+      "flexible": 1
     }],
     "client": "david.verme@gmail.com",
     "adults": 4,
     "children": 0,
     "infants": 1,
-    "max": 1000,
+    "max": 500,
     "active": true,
+    "expire": 1585710000000
+  },  {
+    "description": "Buenos Aires a New York, temprano",
+    "itinerary": [{
+      "from": "BUE",
+      "to": "NYC",
+      "date": "2020/04/21",
+      "flexible": 1
+    }, {
+      "from": "NYC",
+      "to": "BUE",
+      "date": "2020/05/05",
+      "flexible": 1
+    }],
+    "client": "david.verme@gmail.com",
+    "adults": 4,
+    "children": 0,
+    "infants": 1,
+    "max": 500,
+    "active": false,
+    "expire": 1585710000000
+  },  {
+    "description": "Buenos Aires a New York, tarde",
+    "itinerary": [{
+      "from": "BUE",
+      "to": "NYC",
+      "date": "2020/04/24",
+      "flexible": 1
+    }, {
+      "from": "NYC",
+      "to": "BUE",
+      "date": "2020/05/08",
+      "flexible": 1
+    }],
+    "client": "david.verme@gmail.com",
+    "adults": 4,
+    "children": 0,
+    "infants": 1,
+    "max": 500,
+    "active": false,
     "expire": 1585710000000
   }],
   "providers": {
