@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node index.js",
     "find": "node --eval 'require(\"./modules/finder\").find()'",
-    "find:test": "node --eval 'require(\"./modules/finder\").find(true)'",
+    "find:test": "node --eval 'require(\"./modules/finder\").find(true)'"
   },
   "keywords": [],
   "author": "",
