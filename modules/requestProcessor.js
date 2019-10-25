@@ -9,7 +9,7 @@ const reportMatch = (provider, request, result) => {
   const url = provider.getResultUrl(request.itinerary);
   
   const text = `Pay $${result} for a trip with destination to ${destination} with dates ${dates}. LINK: ${url}. Email: ${request.client}`;
-  console.log(`MATCH with!!!!`, text);
+  console.log(`MATCH with ${provider.name} for ${request.description}!!!!`, text);
   
   sendEmail(request.client, 'We found a deal!!!', text);
 };
@@ -62,8 +62,10 @@ const processRequest = async (request) => {
   await Promise.all(providers.map((provider) => {
     itineraries.forEach(async (itinerary) => {
       const result = await provider.processItinerary(itinerary);
-      console.log('Processed itinerary: ', itinerary);
-      console.log('RESULT: ', result);
+      console.log(`Processed:`);
+      console.log('Request: ', request.description);
+      console.log('Itinerary: ', itinerary);
+      console.log('RESULT: $', result);
 
       if (isMatch(request, result)) {
         reportMatch(provider, request, result);

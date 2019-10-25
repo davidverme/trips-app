@@ -21,7 +21,7 @@
     "children": 0,
     "infants": 1,
     "max": 550,
-    "active": false,
+    "active": true,
     "expire": 1585710000000
   }, {
     "description": "Buenos Aires a Miami",
@@ -41,7 +41,7 @@
     "children": 0,
     "infants": 1,
     "max": 500,
-    "active": false,
+    "active": true,
     "expire": 1585710000000
   }, {
     "description": "Buenos Aires, New York y Miami",
@@ -66,7 +66,7 @@
     "children": 0,
     "infants": 1,
     "max": 550,
-    "active": false,
+    "active": true,
     "expire": 1585710000000
   }, {
     "description": "Buenos Aires a Miami, volviendo de New York",
@@ -106,7 +106,7 @@
     "children": 0,
     "infants": 1,
     "max": 500,
-    "active": false,
+    "active": true,
     "expire": 1585710000000
   },  {
     "description": "Buenos Aires a New York, tarde",
@@ -126,7 +126,176 @@
     "children": 0,
     "infants": 1,
     "max": 500,
-    "active": false,
+    "active": true,
+    "expire": 1585710000000
+  }, {
+    "description": "Cordoba, Miami y New York",
+    "itinerary": [{
+      "from": "COR",
+      "to": "MIA",
+      "date": "2020/04/24",
+      "flexible": 1
+    }, {
+      "from": "MIA",
+      "to": "NYC",
+      "date": "2020/05/01"
+    }, {
+      "from": "NYC",
+      "to": "COR",
+      "date": "2020/05/06",
+      "flexible": 2
+    }],
+    "client": "david.verme@gmail.com",
+    "adults": 4,
+    "children": 0,
+    "infants": 1,
+    "max": 550,
+    "active": true,
+    "expire": 1585710000000
+  }, {
+    "description": "Cordoba a Miami",
+    "itinerary": [{
+      "from": "COR",
+      "to": "MIA",
+      "date": "2020/04/23",
+      "flexible": 2
+    }, {
+      "from": "MIA",
+      "to": "COR",
+      "date": "2020/05/06",
+      "flexible": 2
+    }],
+    "client": "david.verme@gmail.com",
+    "adults": 4,
+    "children": 0,
+    "infants": 1,
+    "max": 500,
+    "active": true,
+    "expire": 1585710000000
+  }, {
+    "description": "Cordoba, New York y Miami",
+    "itinerary": [{
+      "from": "COR",
+      "to": "NYC",
+      "date": "2020/04/21",
+      "flexible": 1
+    }, {
+      "from": "NYC",
+      "to": "MIA",
+      "date": "2020/04/25",
+      "flexible": 1
+    }, {
+      "from": "MIA",
+      "to": "COR",
+      "date": "2020/05/03",
+      "flexible": 1
+    }],
+    "client": "david.verme@gmail.com",
+    "adults": 4,
+    "children": 0,
+    "infants": 1,
+    "max": 550,
+    "active": true,
+    "expire": 1585710000000
+  }, {
+    "description": "Cordoba a Miami, volviendo de New York",
+    "itinerary": [{
+      "from": "COR",
+      "to": "MIA",
+      "date": "2020/04/24",
+      "flexible": 1
+    }, {
+      "from": "NYC",
+      "to": "COR",
+      "date": "2020/05/06",
+      "flexible": 1
+    }],
+    "client": "david.verme@gmail.com",
+    "adults": 4,
+    "children": 0,
+    "infants": 1,
+    "max": 500,
+    "active": true,
+    "expire": 1585710000000
+  },  {
+    "description": "Cordoba a New York, temprano",
+    "itinerary": [{
+      "from": "COR",
+      "to": "NYC",
+      "date": "2020/04/21",
+      "flexible": 1
+    }, {
+      "from": "NYC",
+      "to": "COR",
+      "date": "2020/05/05",
+      "flexible": 1
+    }],
+    "client": "david.verme@gmail.com",
+    "adults": 4,
+    "children": 0,
+    "infants": 1,
+    "max": 500,
+    "active": true,
+    "expire": 1585710000000
+  },  {
+    "description": "Cordoba a New York, tarde",
+    "itinerary": [{
+      "from": "COR",
+      "to": "NYC",
+      "date": "2020/04/24",
+      "flexible": 1
+    }, {
+      "from": "NYC",
+      "to": "COR",
+      "date": "2020/05/08",
+      "flexible": 1
+    }],
+    "client": "david.verme@gmail.com",
+    "adults": 4,
+    "children": 0,
+    "infants": 1,
+    "max": 500,
+    "active": true,
+    "expire": 1585710000000
+  }, {
+    "description": "Cordoba a Miami, New York a Buenos Aires",
+    "itinerary": [{
+      "from": "COR",
+      "to": "MIA",
+      "date": "2020/04/24",
+      "flexible": 1
+    }, {
+      "from": "NYC",
+      "to": "BUE",
+      "date": "2020/05/06",
+      "flexible": 1
+    }],
+    "client": "david.verme@gmail.com",
+    "adults": 4,
+    "children": 0,
+    "infants": 1,
+    "max": 500,
+    "active": true,
+    "expire": 1585710000000
+  }, {
+    "description": "Buenos Aires a Miami, New York a Cordoba",
+    "itinerary": [{
+      "from": "BUE",
+      "to": "MIA",
+      "date": "2020/04/24",
+      "flexible": 1
+    }, {
+      "from": "NYC",
+      "to": "COR",
+      "date": "2020/05/06",
+      "flexible": 1
+    }],
+    "client": "david.verme@gmail.com",
+    "adults": 4,
+    "children": 0,
+    "infants": 1,
+    "max": 500,
+    "active": true,
     "expire": 1585710000000
   }],
   "providers": {
