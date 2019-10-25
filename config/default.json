@@ -20,7 +20,7 @@
     "children": 0,
     "infants": 1,
     "max": 600,
-    "active": true,
+    "active": false,
     "expire": 1585710000000
   }, {
     "itinerary": [{
@@ -39,7 +39,7 @@
     "children": 0,
     "infants": 1,
     "max": 500,
-    "active": true,
+    "active": false,
     "expire": 1585710000000
   }, {
     "itinerary": [{
@@ -62,26 +62,26 @@
     "adults": 4,
     "children": 0,
     "infants": 1,
-    "max": 600,
-    "active": true,
+    "max": 550,
+    "active": false,
     "expire": 1585710000000
   }, {
     "itinerary": [{
       "from": "BUE",
       "to": "MIA",
       "date": "2020/04/23",
-      "flexible": 2
+      "flexible": 0
     }, {
       "from": "NYC",
       "to": "BUE",
       "date": "2020/05/06",
-      "flexible": 2
+      "flexible": 0
     }],
     "client": "david.verme@gmail.com",
     "adults": 4,
     "children": 0,
     "infants": 1,
-    "max": 500,
+    "max": 1000,
     "active": true,
     "expire": 1585710000000
   }],
